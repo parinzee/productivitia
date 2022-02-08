@@ -4,17 +4,14 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply font-sans antialiased w-full h-full p-0 m-0;
+}
+#__next {
+  @apply w-full h-full;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer components {
+  .glass {
+    @apply flex rounded-lg bg-gray-300 border-gray-400 bg-opacity-30 backdrop-blur-lg;
+  }
 }

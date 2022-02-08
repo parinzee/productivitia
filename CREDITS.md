@@ -1,0 +1,6 @@
+- https://www.artstation.com/camilleunknown
+- https://www.reddit.com/user/strokemylegs/
+- https://www.deviantart.com/faxdoc
+- https://www.deviantart.com/valenberg
+- https://www.deviantart.com/kirokaze
+- And other un-named artists.
