@@ -22,7 +22,7 @@ const Startpage: NextPage = () => {
               name="description"
               content="A startpage with an aim of helping you to improve productivity."
             />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/icons/favicon.ico" />
           </Head>
         </div>
       )}
