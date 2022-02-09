@@ -59,7 +59,13 @@ export default function Document() {
         content="https://yourdomain.com/icons/ios/152.png"
       />
 
-      <Head />
+      <Head>
+        <link rel="icon" href="/icons/favicon.ico" />
+        <meta
+          name="description"
+          content="A startpage with an aim of helping you to improve productivity."
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />
