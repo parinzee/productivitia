@@ -1,25 +1,21 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
-import useRandGif from "../../hooks/useRandGif";
+import BackgroundVideo from "../../components/app/BackgroundVideo";
+import useRandBack from "../../hooks/useRandBack";
 
 const Startpage: NextPage = () => {
-  // Selected a random gif from our /public/backgrounds folder
-  const selectedBg = useRandGif();
+  // Select a random gif from our /public/backgrounds/webm folder
+  const selectedBack = useRandBack();
   return (
     <>
+      <Head>
+        <title>Productivitia - Startpage</title>
+      </Head>
       {typeof window === "undefined" ? null : (
-        <div
-          className="flex flex-col h-full bg-cover bg-no-repeat"
-          style={{
-            background: `url(/backgrounds/${selectedBg}) no-repeat`,
-            backgroundSize: "cover",
-          }}
-        >
-          <Head>
-            <title>Productivitia - Startpage</title>
-          </Head>
-        </div>
+        <>
+          <BackgroundVideo pathToVideo={selectedBack} type="video/webm" />
+        </>
       )}
     </>
   );
