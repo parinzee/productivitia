@@ -7,6 +7,7 @@ const nextConfig = {
     disable: process.env.NODE_ENV === "development",
     scope: "/app",
     sw: "service-worker.js",
+    publicExcludes: ["!icons/android/*", "!icons/ios/*", "!icons/windows11/*"],
   },
 };
 
