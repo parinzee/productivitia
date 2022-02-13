@@ -11,7 +11,7 @@ export default function BackgroundVideo({
 }: BackgroundVideoProps) {
   return (
     <video
-      className="fixed top-0 left-0 w-screen h-screen object-cover -z-50"
+      className="fixed top-0 left-0 z-auto h-screen w-screen bg-cyan-300 object-cover dark:bg-slate-800"
       playsInline
       autoPlay
       muted

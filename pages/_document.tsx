@@ -56,7 +56,7 @@ export default function Document() {
       <meta property="og:url" content="https://productivitia.netlify.app" />
       <meta
         property="og:image"
-        content="https://yourdomain.com/icons/ios/152.png"
+        content="https://productivitia.netlify.app/icons/ios/152.png"
       />
 
       <Head>
