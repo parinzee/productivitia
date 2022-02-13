@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
+import Header from "../components/index/Header";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
-        <title>
-          Productivitia - Gamify your life to improve productivity with a start
-          page.
-        </title>
+        <title>Productivitia - Improve Productivity with a Startpage</title>
       </Head>
-    </div>
+      <Header />
+      <div className=""></div>
+    </>
   );
 };
 
