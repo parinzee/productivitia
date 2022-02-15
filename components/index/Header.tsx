@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import logo from "../../public/icons/Nobg-1024.png";
 
 export default function Header(): JSX.Element {
   const [top, setTop] = React.useState(true);
@@ -29,7 +28,7 @@ export default function Header(): JSX.Element {
             <Link href="/">
               <a className="block" aria-label="Productivitia">
                 <Image
-                  src={logo}
+                  src="/icons/Nobg-1024.png"
                   alt="Productivitia Logo"
                   width={64}
                   height={64}

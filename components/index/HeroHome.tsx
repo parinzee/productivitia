@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import HeroImage from "../../public/icons/windows11/Wide310x150Logo.scale-400.png";
 
 export default function HeroHome(): JSX.Element {
   return (
@@ -80,7 +79,7 @@ export default function HeroHome(): JSX.Element {
               <div className="flex flex-col justify-center dark:border-2 dark:border-gray-800 shadow-md shadow-pink-500 rounded-lg">
                 <Image
                   className="mx-auto rounded-lg"
-                  src={HeroImage}
+                  src="icons/windows11/Wide310x150Logo.scale-400.png"
                   width="768"
                   height="432"
                   alt="Hero"
