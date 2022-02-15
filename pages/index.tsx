@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
 import Header from "../components/index/Header";
+import HeroHome from "../components/index/HeroHome";
 
 const Home: NextPage = () => {
   return (
@@ -9,8 +10,12 @@ const Home: NextPage = () => {
       <Head>
         <title>Productivitia - Improve Productivity with a Startpage</title>
       </Head>
-      <Header />
-      <div className=""></div>
+      <div className="flex flex-col min-h-screen overflow-hidden dark:bg-black">
+        <Header />
+        <main className="flex-grow">
+          <HeroHome />
+        </main>
+      </div>
     </>
   );
 };

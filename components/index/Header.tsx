@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
-        !top && "bg-white backdrop-blur-sm shadow-lg"
+        !top && "bg-white dark:bg-gray-900 glass shadow-lg"
       }`}
     >
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
@@ -50,7 +50,7 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/signup">
-                  <a className="px-3 py-2 shadow text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3 rounded">
+                  <a className="btn-sm px-3 py-2 shadow text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3 rounded">
                     Sign up
                   </a>
                 </Link>
