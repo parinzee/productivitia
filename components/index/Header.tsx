@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as React from "react";
 import logo from "../../public/icons/Nobg-1024.png";
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const [top, setTop] = React.useState(true);
 
   // detect whether user has scrolled the page down by 10px

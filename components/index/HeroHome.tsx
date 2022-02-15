@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as React from "react";
 import HeroImage from "../../public/icons/windows11/Wide310x150Logo.scale-400.png";
 
-export default function HeroHome() {
+export default function HeroHome(): JSX.Element {
   return (
     <section className="relative">
       {/* Illustration behind hero content */}
