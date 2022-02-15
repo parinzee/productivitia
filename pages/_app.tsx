@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           opacity: 1,
         },
       }}
+      className="bg-white dark:bg-black"
     >
       <Component {...pageProps} />
     </motion.div>

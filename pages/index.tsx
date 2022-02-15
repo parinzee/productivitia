@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
+import Footer from "../components/index/Footer";
 import Header from "../components/index/Header";
 import HeroHome from "../components/index/HeroHome";
 
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
         <Header />
         <main className="flex-grow">
           <HeroHome />
+          <Footer />
         </main>
       </div>
     </>
