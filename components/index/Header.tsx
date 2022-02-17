@@ -47,7 +47,7 @@ export default function Header(): JSX.Element {
                   onClick={() => authContext?.login("login")}
                   className="font-medium dark:text-gray-400 text-gray-600 dark:hover:text-gray-600 hover:cursor-pointer hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Sign in
+                  Login
                 </div>
               </li>
               <li>
