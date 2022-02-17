@@ -2,7 +2,7 @@ import NetlifyIdentityWidget from "netlify-identity-widget";
 import * as React from "react";
 
 interface AuthContextInterface {
-  user: null;
+  user: NetlifyIdentityWidget.User | null;
   authReady: boolean;
   login: (tabName?: "signup" | "login") => void;
   logout: () => void;
@@ -18,16 +18,24 @@ export const AuthContext = React.createContext<AuthContextInterface | null>(
 
 export function AuthContextProvider({ children }: AuthContextProviderProps) {
   //Initialize the objects in the context
-  const [user, setUser] = React.useState(null);
+  const [user, setUser] = React.useState<AuthContextInterface["user"]>(null);
   const [authReady, setAuthReady] = React.useState(false);
+
   const login: AuthContextInterface["login"] = (tabName?) => {
+    NetlifyIdentityWidget.on("login", (user) => {
+      setUser(user);
+      // Redirect to our page for installing extension.
+      window.location.href = "https://productivitia.netlify.app/installext";
+    });
     NetlifyIdentityWidget.open(tabName);
   };
   const logout = () => {
     NetlifyIdentityWidget.logout();
+    setUser(null);
+    NetlifyIdentityWidget.close();
   };
 
-  // Initialize the object
+  // Initialize
   React.useEffect(() => {
     NetlifyIdentityWidget.init({
       APIUrl: "https://productivitia.netlify.app/.netlify/identity",
