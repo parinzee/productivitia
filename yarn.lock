@@ -1146,6 +1146,11 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
+"@types/netlify-identity-widget@^1.9.3":
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/@types/netlify-identity-widget/-/netlify-identity-widget-1.9.3.tgz#cc4a10cc4b61c7e2e31fa4757b504136218c9829"
+  integrity sha512-xAzPO2TM8Z+gVZ/3wXUM5WIKWEE0TG+uD6u/4Dq0tgA+bwrb+qyIqhlaIyJZcXN6MienvYxUH3DKUSYb8evfYA==
+
 "@types/node@*":
   version "17.0.16"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.16.tgz#e3733f46797b9df9e853ca9f719c8a6f7b84cd26"
