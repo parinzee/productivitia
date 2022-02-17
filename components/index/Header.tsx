@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import { AuthContext } from "../../stores/AuthContext";
 
 export default function Header(): JSX.Element {
   const [top, setTop] = React.useState(true);
+  const authContext = React.useContext(AuthContext);
 
   // detect whether user has scrolled the page down by 10px
   React.useEffect(() => {
@@ -41,18 +43,20 @@ export default function Header(): JSX.Element {
           <nav className="flex flex-grow">
             <ul className="flex flex-grow justify-end flex-wrap items-center">
               <li>
-                <Link href="/signin">
-                  <a className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">
-                    Sign in
-                  </a>
-                </Link>
+                <div
+                  onClick={() => authContext?.login("login")}
+                  className="font-medium dark:text-gray-400 text-gray-600 dark:hover:text-gray-600 hover:cursor-pointer hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Sign in
+                </div>
               </li>
               <li>
-                <Link href="/signup">
-                  <a className="btn-sm px-3 py-2 shadow text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3 rounded">
-                    Sign up
-                  </a>
-                </Link>
+                <div
+                  onClick={() => authContext?.login("signup")}
+                  className="btn-sm px-3 py-2 shadow text-gray-200 bg-gray-900 hover:bg-gray-800 hover:cursor-pointer ml-3 rounded"
+                >
+                  Sign up
+                </div>
               </li>
             </ul>
           </nav>

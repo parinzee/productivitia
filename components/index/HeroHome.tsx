@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import * as React from "react";
+import { AuthContext } from "../../stores/AuthContext";
 
 export default function HeroHome(): JSX.Element {
+  const authContext = React.useContext(AuthContext);
   return (
     <section className="relative">
       {/* Illustration behind hero content */}
@@ -52,15 +53,16 @@ export default function HeroHome(): JSX.Element {
             </h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-2xl text-gray-600 dark:text-gray-400 mb-8">
-                A beautiful startpage that gamifies your life and alows you to
+                A beautiful startpage that gamifies your life and allows you to
                 get more things done.
               </p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-                <Link href="/signup">
-                  <a className="btn text-white bg-purple-500 w-full mb-4 sm:w-auto sm:mb-0 shadow-lg hover:shadow-xl shadow-purple-600/50">
-                    Start Now for Free
-                  </a>
-                </Link>
+                <a
+                  onClick={() => authContext?.login("signup")}
+                  className="btn text-white bg-purple-500 w-full mb-4 sm:w-auto sm:mb-0 shadow-lg hover:cursor-pointer hover:shadow-xl shadow-purple-600/50"
+                >
+                  Start Now for Free
+                </a>
               </div>
             </div>
           </div>

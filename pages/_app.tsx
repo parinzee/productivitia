@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { AppProps } from "next/app";
+import { AuthContextProvider } from "../stores/AuthContext";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -17,7 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
       className="bg-white dark:bg-black"
     >
-      <Component {...pageProps} />
+      <AuthContextProvider>
+        <Component {...pageProps} />
+      </AuthContextProvider>
     </motion.div>
   );
 }
