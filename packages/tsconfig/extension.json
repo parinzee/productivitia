@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "extension",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ES6",
+    "sourceMap": false,
+    "outDir": "dist/js",
+    "module": "commonjs"
+  }
+}
