@@ -1,0 +1,10 @@
+{
+  "name": "Productivitia",
+  "description": "Improving productivity through a startpage that gamifies your life",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "startpage.html",
+    "homepage": "https://productivitia.netlify.app/app"
+  }
+}
