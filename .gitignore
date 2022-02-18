@@ -47,5 +47,6 @@ yarn-error.log*
 # turbo
 .turbo
 
-# extension bundle file
+# apps/extension
 bundle.js
+extension.zip
