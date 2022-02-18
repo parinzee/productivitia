@@ -1,32 +1,19 @@
 {
-  "name": "productivitia",
   "private": true,
+  "license": "AGPLv3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/netlify-identity-widget": "^1.9.3",
-    "framer-motion": "^6.2.6",
-    "netlify-identity-widget": "^1.9.2",
-    "next": "12.0.10",
-    "next-pwa": "^5.4.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@types/node": "17.0.15",
-    "@types/react": "17.0.39",
-    "autoprefixer": "^10.4.2",
-    "eslint": "8.8.0",
-    "eslint-config-next": "12.0.10",
-    "postcss": "^8.4.6",
     "prettier": "^2.5.1",
-    "prettier-plugin-organize-imports": "^2.3.4",
-    "tailwindcss": "^3.0.18",
-    "typescript": "4.5.5"
-  }
+    "turbo": "latest"
+  },
+  "packageManager": "yarn@1.22.17"
 }
