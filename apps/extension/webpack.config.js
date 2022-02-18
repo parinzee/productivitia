@@ -3,11 +3,11 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.ts",
   module: {
-    rule: [
+    rules: [
       {
         test: /\.ts$/,
         use: "ts-loader",
-        inlude: [path.resolve(__dirname, "src")],
+        include: [path.resolve(__dirname, "src")],
         exclude: /node_modules/,
       },
     ],
