@@ -16,6 +16,8 @@
     "ts-loader": "^9.2.6",
     "tsconfig": "*",
     "typescript": "^4.5.5",
+    "webextension-polyfill": "^0.8.0",
+    "@types/webextension-polyfill": "^0.8.2",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   }
