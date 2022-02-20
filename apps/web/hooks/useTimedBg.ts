@@ -13,7 +13,7 @@ const backgrounds = [
 
 export type background = typeof backgrounds[number];
 
-export default function useRandBack(): background {
+export default function useTimedBg(): background {
   const hour = new Date().getHours();
   // Select background based on the time
   if (hour >= 22) {

@@ -2,10 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
 import BackgroundVideo from "../../components/app/BackgroundVideo";
-import Navbar from "../../components/shared/Navbar";
 import useTimedBg from "../../hooks/useTimedBg";
 
-const Startpage: NextPage = () => {
+const Onboarding: NextPage = () => {
   // Select a random gif from our /public/backgrounds/webm folder
   const selectedBg = useTimedBg();
   return (
@@ -13,15 +12,9 @@ const Startpage: NextPage = () => {
       <Head>
         <title>Productivitia - Startpage</title>
       </Head>
-      {/* This part will only be rendered client-side */}
-      {typeof window === "undefined" ? null : (
-        <>
-          <BackgroundVideo pathToVideo={selectedBg} type="video/webm" />
-          <Navbar />
-        </>
-      )}
+      <BackgroundVideo pathToVideo={selectedBg} type="video/webm" />
     </>
   );
 };
 
-export default Startpage;
+export default Onboarding;

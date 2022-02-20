@@ -25,7 +25,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     NetlifyIdentityWidget.on("login", (user) => {
       setUser(user);
       // Redirect to our page for installing extension.
-      window.location.href = "https://productivitia.netlify.app/installext";
+      window.location.href = "https://productivitia.netlify.app/onboarding";
     });
     NetlifyIdentityWidget.open(tabName);
   };
