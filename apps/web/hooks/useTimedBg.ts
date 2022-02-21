@@ -23,7 +23,7 @@ export default function useTimedBg(): background {
   } else if (hour >= 18) {
     return backgrounds[2];
   } else if (hour >= 14) {
-    return backgrounds[3];
+    return backgrounds[4];
   } else if (hour >= 13) {
     return backgrounds[4];
   } else if (hour >= 11) {
