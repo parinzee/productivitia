@@ -59,6 +59,8 @@ export default function Document() {
         content="https://productivitia.netlify.app/icons/ios/152.png"
       />
 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
       <Head>
         <link rel="icon" href="/icons/favicon.ico" />
         <meta
