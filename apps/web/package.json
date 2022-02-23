@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@types/netlify-identity-widget": "^1.9.3",
+    "dexie": "^3.2.1",
+    "dexie-react-hooks": "^1.1.1",
     "framer-motion": "^6.2.6",
     "netlify-identity-widget": "^1.9.2",
     "next": "12.1.0",
