@@ -2,11 +2,30 @@ import * as React from "react";
 import { FaSafari } from "react-icons/fa";
 import { GrFirefox } from "react-icons/gr";
 import { SiGooglechrome } from "react-icons/si";
+import { db } from "../../utils/db";
+
+async function addCompanion(companionName: string) {
+  try {
+    await db.companions.add({
+      id: 1,
+      name: companionName,
+      experience: 0,
+    });
+  } catch (error) {
+    await db.companions.delete(1);
+    await db.companions.add({
+      id: 1,
+      name: companionName,
+      experience: 0,
+    });
+  }
+}
 
 export default function OnboardingForm() {
   const [companionName, setCompanionName] = React.useState("");
-  const handleNameInput = (name: string) => {
+  const handleNameInput = async (name: string) => {
     setCompanionName(name);
+    await addCompanion(name);
   };
   return (
     <>
