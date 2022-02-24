@@ -9,7 +9,6 @@ const nextConfig = {
   pwa: {
     dest: "public",
     disable: process.env.NODE_ENV === "development",
-    scope: "/app",
     sw: "service-worker.js",
     // Exclude files from precaching
     publicExcludes: [
