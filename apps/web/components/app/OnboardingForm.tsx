@@ -10,6 +10,8 @@ async function addCompanion(companionName: string) {
       id: 1,
       name: companionName,
       experience: 0,
+      maxExperience: 50,
+      level: 1,
     });
   } catch (error) {
     await db.companions.delete(1);
@@ -17,6 +19,8 @@ async function addCompanion(companionName: string) {
       id: 1,
       name: companionName,
       experience: 0,
+      maxExperience: 50,
+      level: 1,
     });
   }
 }
