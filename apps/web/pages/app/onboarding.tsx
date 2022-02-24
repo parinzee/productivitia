@@ -31,7 +31,7 @@ const Onboarding: NextPage = () => {
         </div>
       ) : (
         <div className="fixed w-screen h-screen flex items-center content-center justify-center bg-transparent">
-          <div className="glass w-3/4 h-4/6 flex flex-col mx-auto my-auto rounded-2xl p-5 overflow-auto">
+          <div className="glass-box w-3/4 h-4/6 flex flex-col mx-auto my-auto overflow-auto">
             <OnboardingForm />
           </div>
         </div>

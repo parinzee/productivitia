@@ -17,7 +17,10 @@ body::-webkit-scrollbar {
 
 @layer components {
   .glass {
-    @apply border-gray-400 bg-gray-400 bg-opacity-60 backdrop-blur;
+    @apply border-gray-400 bg-white bg-opacity-60 backdrop-blur;
+  }
+  .glass-box {
+    @apply glass rounded-2xl p-5;
   }
   .btn,
   .btn-sm {

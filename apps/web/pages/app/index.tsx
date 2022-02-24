@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
 import BackgroundVideo from "../../components/app/BackgroundVideo";
-import Navbar from "../../components/shared/Navbar";
+import Dashboard from "../../components/app/Dashboard";
 import useTimedBg from "../../hooks/useTimedBg";
 
 const Startpage: NextPage = () => {
@@ -17,7 +17,9 @@ const Startpage: NextPage = () => {
       {typeof window === "undefined" ? null : (
         <>
           <BackgroundVideo pathToVideo={selectedBg} type="video/webm" />
-          <Navbar />
+          <div className="fixed w-screen h-screen flex items-center content-center justify-center bg-transparent">
+            <Dashboard />
+          </div>
         </>
       )}
     </>
