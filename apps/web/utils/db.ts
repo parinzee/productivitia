@@ -4,6 +4,8 @@ export interface Companion {
   id?: number;
   name: string;
   experience: number;
+  maxExperience: number;
+  level: number;
 }
 
 export interface Todo {
@@ -19,8 +21,8 @@ export class Database extends Dexie {
 
   constructor() {
     super("Database");
-    this.version(1).stores({
-      companions: "id++, name, experience",
+    this.version(2).stores({
+      companions: "id++, name, experience, maxExperience, level",
       Todos: "id++, title",
     });
   }
