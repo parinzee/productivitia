@@ -10,6 +10,8 @@ export const handler: Handler = async (event, context) => {
     }),
     headers: {
       "Cache-Control": "public, max-age=43200, must-revalidate",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
     },
   };
 };
