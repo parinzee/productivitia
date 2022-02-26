@@ -5,7 +5,10 @@ export interface Companion {
   name: string;
   experience: number;
   maxExperience: number;
+  lastOpened: Date;
+  energy: number;
   level: number;
+  current: boolean;
 }
 
 export interface Todo {
@@ -14,15 +17,14 @@ export interface Todo {
 }
 
 export class Database extends Dexie {
-  // 'friends' is added by dexie when declaring the stores()
-  // We just tell the typing system this is the case
   companions!: Table<Companion>;
   todos!: Table<Todo>;
 
   constructor() {
     super("Database");
-    this.version(2).stores({
-      companions: "id++, name, experience, maxExperience, level",
+    this.version(5).stores({
+      companions:
+        "id++, name, experience, maxExperience, level, lastOpened, energy, current",
       Todos: "id++, title",
     });
   }

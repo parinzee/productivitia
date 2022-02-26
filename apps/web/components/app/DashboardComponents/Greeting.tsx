@@ -6,7 +6,7 @@ import { AuthContext } from "../../../stores/AuthContext";
 function Clock() {
   const [time, setTime] = React.useState(new Date());
   React.useEffect(() => {
-    setInterval(() => setTime(new Date()), 30000);
+    setInterval(() => setTime(new Date()), 500);
   });
   return (
     <div className="w-20 flex items-center content-center flex-row justify-between">

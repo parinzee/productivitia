@@ -12,6 +12,9 @@ async function addCompanion(companionName: string) {
       experience: 0,
       maxExperience: 50,
       level: 1,
+      lastOpened: new Date(),
+      energy: 100,
+      current: true,
     });
   } catch (error) {
     await db.companions.delete(1);
@@ -21,6 +24,9 @@ async function addCompanion(companionName: string) {
       experience: 0,
       maxExperience: 50,
       level: 1,
+      lastOpened: new Date(),
+      energy: 100,
+      current: true,
     });
   }
 }
