@@ -1,0 +1,6 @@
+[build]
+  publish = "apps/web/out"
+  command = "yarn build"
+
+[functions]
+  directory = "apps/functions/"
