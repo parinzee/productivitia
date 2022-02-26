@@ -1,8 +1,8 @@
 import { Handler } from "@netlify/functions";
-import axios from "axios";
+import { db } from "./quotesdb";
 
 export const handler: Handler = async (event, context) => {
-  const quote = await axios.get("https://zenquotes.io/api/today");
+  const quote = db[Math.floor(Math.random() * db.length)];
   return {
     statusCode: 200,
     body: JSON.stringify({
