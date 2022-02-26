@@ -1,0 +1,9 @@
+{
+  "name": "quote-of-day",
+  "version": "1.0.0",
+  "license": "AGPLv3",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}
