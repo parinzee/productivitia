@@ -17,7 +17,6 @@ export default function Quote() {
       .then((resp) => resp.json())
       .then((data: QuoteAPIReturn) => {
         setQuoteObj(data);
-        console.log(data);
       });
   }, []);
   return (

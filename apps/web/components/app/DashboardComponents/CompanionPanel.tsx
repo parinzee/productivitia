@@ -4,6 +4,7 @@ import * as React from "react";
 import { IconType } from "react-icons";
 import { FaLevelUpAlt } from "react-icons/fa";
 import { HiLightningBolt } from "react-icons/hi";
+import { toast } from "react-toastify";
 import { getCompanionIcon } from "../../../utils/companionHelper";
 import { Companion, db } from "../../../utils/db";
 
@@ -119,7 +120,7 @@ export default function CompanionPanel() {
           onClick={async () => {
             setButtonActive(false);
             await addEnergy(companion, 15);
-            // Add artificial delay
+            toast("Energy increased!");
             await new Promise((resolve) => setTimeout(resolve, 1500));
             setButtonActive(true);
           }}
@@ -133,6 +134,7 @@ export default function CompanionPanel() {
           onClick={async () => {
             setButtonActive(false);
             await addEnergy(companion, 5);
+            toast("Energy increased!");
             // Add artificial delay
             await new Promise((resolve) => setTimeout(resolve, 1500));
             setButtonActive(true);

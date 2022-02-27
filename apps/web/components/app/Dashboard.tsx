@@ -6,7 +6,7 @@ import Todos from "./DashboardComponents/Todos";
 
 export default function Dashboard() {
   return (
-    <div className="grid w-5/6 h-3/4 grid-cols-5 grid-rows-6 gap-14">
+    <div className="grid w-5/6 h-3/4 grid-cols-5 grid-rows-6 gap-12">
       <CompanionPanel />
       <Greeting />
       <Todos />

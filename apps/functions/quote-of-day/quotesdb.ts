@@ -200,14 +200,6 @@ export const db = [
     category: [{ name: "Learning" }],
   },
   {
-    id: "026",
-    body: "It is better to conquer yourself than to win a thousand battles. Then the victory is yours. It cannot be taken from you, not by angels or by demons, heaven or hell.",
-    author: "Buddha",
-    authorType: "Spiritual Figure",
-    dateAdded: "2020-08-08",
-    category: [{ name: "Mindfulness" }, { name: "Self" }],
-  },
-  {
     id: "027",
     body: "As we express our gratitude, we must never forget that the highest appreciation is not to utter words, but to live by them.",
     author: "John F. Kennedy",
