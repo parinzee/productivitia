@@ -20,8 +20,8 @@ function Clock() {
     setInterval(() => setTime(new Date()), 500);
   });
   return (
-    <div className="w-20 flex items-center content-center flex-row justify-between">
-      <FiClock size={25} />
+    <div className="w-20 flex content-center items-center justify-between">
+      <FiClock size={25} className="self-center" />
       {time.toLocaleString("en-us", {
         hour: "numeric",
         minute: "numeric",

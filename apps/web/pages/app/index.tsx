@@ -28,7 +28,7 @@ const Startpage: NextPage = () => {
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            toastClassName="text-base"
+            toastClassName="text-base font-bold"
           />
           <BackgroundVideo pathToVideo={selectedBg} type="video/webm" />
           <div className="fixed w-screen h-screen flex items-center content-center justify-center bg-transparent">
