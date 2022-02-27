@@ -42,10 +42,7 @@ export default function HeroHome(): JSX.Element {
         <div className="pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
-            <h1
-              className="dark:text-slate-50 text-6xl md:text-8xl font-extrabold leading-tighter tracking-tighter mb-4"
-              data-aos="zoom-y-out"
-            >
+            <h1 className="dark:text-slate-50 text-6xl md:text-8xl font-extrabold leading-tighter tracking-tighter mb-4">
               Dramaticially increase{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400">
                 Productivity
