@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply m-0 h-full w-full p-0 font-sans antialiased;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 body::-webkit-scrollbar {
   display: none;
 }
@@ -15,23 +9,23 @@ body::-webkit-scrollbar {
   @apply h-full w-full;
 }
 
-@layer components {
-  .glass {
-    @apply border-gray-400 bg-white bg-opacity-60 backdrop-blur;
-  }
-  .glass-box {
-    @apply glass rounded-2xl p-5;
-  }
-  .btn,
-  .btn-sm {
-    @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;
-  }
+.glass {
+  @apply border-gray-400 bg-white bg-opacity-60;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.glass-box {
+  @apply glass rounded-2xl p-5;
+}
+.btn,
+.btn-sm {
+  @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;
+}
 
-  .btn {
-    @apply px-8 py-3 shadow-lg;
-  }
+.btn {
+  @apply px-8 py-3 shadow-lg;
+}
 
-  .btn-sm {
-    @apply px-4 py-2 shadow;
-  }
+.btn-sm {
+  @apply px-4 py-2 shadow;
 }
