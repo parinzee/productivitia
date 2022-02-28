@@ -23,11 +23,6 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
 
   const login: AuthContextInterface["login"] = (tabName?) => {
     NetlifyIdentityWidget.open(tabName);
-    NetlifyIdentityWidget.on("login", (user) => {
-      setUser(user);
-      // Redirect to our page for installing extension.
-      window.location.href = "https://productivitia.netlify.app/app/onboarding";
-    });
   };
 
   const logout = () => {
@@ -41,6 +36,13 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
     NetlifyIdentityWidget.init({
       APIUrl: "https://productivitia.netlify.app/.netlify/identity",
     });
+
+    NetlifyIdentityWidget.on("login", (user) => {
+      setUser(user);
+      // Redirect to our page for installing extension.
+      window.location.href = "https://productivitia.netlify.app/app/onboarding";
+    });
+
     setAuthReady(true);
     setUser(NetlifyIdentityWidget.currentUser());
   }, []);

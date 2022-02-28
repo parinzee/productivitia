@@ -70,7 +70,7 @@ export default function HeroHome(): JSX.Element {
               <div className="flex flex-col justify-center dark:border-2 dark:border-gray-800 shadow-md shadow-pink-500 rounded-lg">
                 <Image
                   className="mx-auto rounded-lg"
-                  src="icons/windows11/Wide310x150Logo.scale-400.png"
+                  src="images/demo.png"
                   width="768"
                   height="432"
                   alt="Hero"

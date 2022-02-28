@@ -10,7 +10,6 @@ interface News {
 function NewsComponent({ title, author, url }: News) {
   return (
     <div
-      key={url}
       className="w-full h-full bg-white flex flex-col col-span-1 row-span-1 rounded-lg p-3 justify-center content-center hover:bg-blue-300 cursor-pointer transition-all"
       onClick={() => {
         window.open(url);
@@ -34,6 +33,7 @@ export default function HashnodeFeatured() {
         setNews(
           data.map((news) => (
             <NewsComponent
+              key={news.url}
               title={news.title}
               author={news.author}
               url={news.url}
