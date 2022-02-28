@@ -47,7 +47,7 @@ export default function Todos() {
             <div
               onClick={() => handleClick(todo.id)}
               key={todo.id}
-              className="w-11/12 bg-white text-lg text-black font-semibold rounded-lg p-1 mt-5 hover:bg-red-400 transition-all"
+              className="w-11/12 bg-white text-lg text-black font-semibold rounded-lg p-1 mt-5 hover:bg-green-300 transition-all cursor-pointer"
             >
               {todo.title}
             </div>

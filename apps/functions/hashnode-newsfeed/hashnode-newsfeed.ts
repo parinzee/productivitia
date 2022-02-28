@@ -23,8 +23,8 @@ export const handler: Handler = async (event, context) => {
     `,
   });
 
-  // Reformat the data with only the top three new stories
-  const data = [...resp.data.storiesFeed].slice(0, 4).map((element) => {
+  // Reformat the data with only the top six new stories
+  const data = [...resp.data.storiesFeed].slice(0, 6).map((element) => {
     return {
       title: element.title,
       author: element.author.name,

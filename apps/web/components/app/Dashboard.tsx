@@ -1,6 +1,7 @@
 import * as React from "react";
 import CompanionPanel from "./DashboardComponents/CompanionPanel";
 import Greeting from "./DashboardComponents/Greeting";
+import HashnodeFeatured from "./DashboardComponents/HashnodeFeatured";
 import Quote from "./DashboardComponents/Quote";
 import Sounds from "./DashboardComponents/Sounds";
 import Todos from "./DashboardComponents/Todos";
@@ -13,6 +14,7 @@ export default function Dashboard() {
       <Todos />
       <Quote />
       <Sounds />
+      <HashnodeFeatured />
     </div>
   );
 }
