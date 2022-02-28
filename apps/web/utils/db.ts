@@ -16,16 +16,21 @@ export interface Todo {
   title: string;
 }
 
+export interface Habit extends Todo {
+  isCompleted: boolean;
+}
 export class Database extends Dexie {
   companions!: Table<Companion>;
   todos!: Table<Todo>;
+  habits!: Table<Habit>;
 
   constructor() {
     super("Database");
-    this.version(5).stores({
+    this.version(6).stores({
       companions:
         "id++, name, experience, maxExperience, level, lastOpened, energy, current",
-      Todos: "id++, title",
+      todos: "id++, title",
+      habits: "id++, title, isCompleted",
     });
   }
 }

@@ -5,7 +5,11 @@ import { IconType } from "react-icons";
 import { FaLevelUpAlt } from "react-icons/fa";
 import { HiLightningBolt } from "react-icons/hi";
 import { toast } from "react-toastify";
-import { getCompanionIcon } from "../../../utils/companionHelper";
+import {
+  addEnergy,
+  diffMinutes,
+  getCompanionIcon,
+} from "../../../utils/companionHelper";
 import { Companion, db } from "../../../utils/db";
 
 interface CompanionFrameProps {
@@ -19,21 +23,6 @@ interface StatsBarProps {
   Icon: IconType;
   iconSize?: number;
 }
-
-const diffMinutes = (date1: Date, date2: Date): number => {
-  var msDiff = Math.abs(Number(date1) - Number(date2));
-  return Math.floor(msDiff / 1000 / 60);
-};
-
-const addEnergy = async (companion: Companion, energyToAdd: number) => {
-  if (energyToAdd > 100 || energyToAdd + companion.energy > 100) {
-    await db.companions.update(1, { energy: 100 });
-  } else {
-    await db.companions.update(1, {
-      energy: energyToAdd + companion.energy,
-    });
-  }
-};
 
 function CompanionFrame({ level }: CompanionFrameProps) {
   const icon = getCompanionIcon(level);
@@ -76,9 +65,7 @@ export default function CompanionPanel() {
   const [buttonActive, setButtonActive] = React.useState(true);
 
   React.useEffect(() => {
-    const updateDbValues = async () => {
-      // Update the lastOpened value every time
-      const currDate = new Date();
+    const regenEnergy = async () => {
       /* 
         I'm refetching the Companion here otherwise useEffect
         would be called indefinitely. (eg: This updates Companion,
@@ -91,11 +78,10 @@ export default function CompanionPanel() {
         diffMinutes(new Date(), tempCompanion.lastOpened) / 10
       );
       addEnergy(tempCompanion, energyRegen);
-      await db.companions.update(1, { lastOpened: currDate });
     };
-
-    updateDbValues();
+    regenEnergy();
   }, []);
+
   return (
     <div className="glass-box grid grid-cols-3 grid-rows-6 gap-3 justify-between col-span-2 row-span-4 content-center items-center text-xl select-none">
       <div className="text-2xl col-span-3 row-span-1 text-center">

@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body::-webkit-scrollbar {
+body {
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
   display: none;
 }
+
 #__next {
   @apply h-full w-full;
 }
